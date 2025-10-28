@@ -2,6 +2,7 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
 
 -- Variables
 local Client = Players.LocalPlayer
@@ -119,5 +120,6 @@ end
         print(isPurchased, productData)
     end)
 ]]
+
 
 return MonetizationClient
