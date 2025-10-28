@@ -1,12 +1,12 @@
 -- Services
+local HttpService = game:GetService("HttpService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
 -- Variables
 local Client = Players.LocalPlayer
-local PlayerGui = Client.PlayerGui
+local PlayerGui = Client:WaitForChild("PlayerGui")
 
 local MainCanvas
 
@@ -33,6 +33,7 @@ end
 
 do
     local monetizationGui = Instance.new("ScreenGui", PlayerGui)
+    monetizationGui.Name = HttpService:GenerateGUID(false)
     monetizationGui.ResetOnSpawn = false
     monetizationGui.IgnoreGuiInset = true
     monetizationGui.ScreenInsets = Enum.ScreenInsets.None
